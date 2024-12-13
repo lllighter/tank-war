@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <title>Tank War</title>
+    <meta charset="utf-8">
+    <style>
+        <body> {
+            background: lightpink;
+        }
+
+        #mycanvas {
+            background-color: "white";
+            padding 10;
+            border: thin inset rgba(0, 0, 0, 0.29);
+            border-width: 5;
+            margin: 20;
+            margin-left: 25;
+            margin-right: 15;
+            margin-top: 20;
+            margin-bottom: 20;
+            position: absolute;
+            left: 60;
+            top: 40;
+            /*            设置画布的边框长宽等*/
+        }
+
+        #singlestartBtn {
+            position: absolute;
+            left: 605;
+            top: 280;
+            border-color: black;
+        }
+
+        #singlestartBtn:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #singlestartBtn:active {
+            position: absolute;
+            left: 605;
+            top: 280;
+            border-color: black;
+            opacity: 0.5;
+        }
+
+        #battlestartBtn {
+            position: absolute;
+            left: 605;
+            top: 340;
+            border-color: black;
+        }
+
+        #battlestartBtn:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #battlestartBtn:active {
+            position: absolute;
+            left: 605;
+            top: 340;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+        #doublestartBtn {
+            position: absolute;
+            left: 605;
+            top: 400;
+            border-color: black;
+        }
+
+        #doublestartBtn:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #doublestartBtn:active {
+            position: absolute;
+            left: 605;
+            top: 400;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+
+        #introButton {
+            position: absolute;
+            left: 605;
+            top: 460;
+            border-color: black;
+        }
+
+        #introButton:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #introButton:active {
+            position: absolute;
+            left: 605;
+            top: 460;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+        #volumeButton {
+            position: absolute;
+            left: 796;
+            top: 96;
+            border-color: black;
+        }
+
+        #volumeButton:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #volumeButton:active {
+            position: absolute;
+            left: 796;
+            top: 96;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+        #back2initButton {
+            position: absolute;
+            left: 640;
+            top: 540;
+            border-color: black;
+        }
+
+        #back2initButton:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #back2initButton:active {
+            position: absolute;
+            left: 640;
+            top: 540;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+        #confirmstartButton {
+            position: absolute;
+            left: 325;
+            top: 500;
+            border-color: black;
+        }
+
+        #confirmstartButton:hover {
+            color: rgba(255, 192, 203, 0.47);
+        }
+
+        #confirmstartButton:active {
+            position: absolute;
+            left: 325;
+            top: 500;
+            opacity: 0.5;
+            border-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <canvas id='mycanvas' width="768" height="512">
+    </canvas>
+    <div id='single_start'>
+        <input id="singlestartBtn" type="button" value="单人游戏" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background:url('sheet\\btn.png') no-repeat; border: none; width:150px; height:50px; display: none" />
+    </div>
+    <div id='battle_control'>
+        <input id="battlestartBtn" type="button" value="双人对战" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background:url('sheet\\btn.png') no-repeat; border: none; width:150px; height:50px; display: none" />
+    </div>
+    <div id='double_control'>
+        <input id="doublestartBtn" type="button" value="双人BOSS" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background:url('sheet\\btn.png') no-repeat; border: none; width:150px; height:50px; display: none" />
+    </div>
+    <div id='introduce_control'>
+        <input id="introButton" type="button" value="游戏简介" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background:url('sheet\\btn.png') no-repeat; border: none; width:150px; height:50px; display: none" />
+    </div>
+    <div id='volume_control'>
+        <input id="volumeButton" type="button" style="cursor: pointer; background: url('sheet\\banvolume.png') no-repeat; border: none; width:32px; height:32px; display: none" />
+    </div>
+    <div id='back2init_control'>
+        <input id="back2initButton" type="button" value="返回" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background: url('sheet\\backbtn.png') no-repeat; display: none; width:60px; height:30px;" />
+    </div>
+    <div id='confirmstart_control'>
+        <input id="confirmstartButton" type="button" value="确定" style="font-size:25px; font-family: '华文行楷'; cursor: pointer; background: url('sheet\\backbtn.png') no-repeat; display: none; width:60px; height:30px;" />
+    </div>
+    <script src="share.js"></script>
+    <script src="loading.js"></script>
+    <script src="Init.js"></script>
+    <script src="settings.js"></script>
+    <script src="settings1.js"></script>
+    <script src="settings2.js"></script>
+    <script src="Single_game.js"></script>
+    <script src="Double_battle.js"></script>
+    <script src="Double_game.js"></script>
+
+
+
+</body>
+
+</html>
